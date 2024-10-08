@@ -1,5 +1,5 @@
 # WCtool - Word Count Tool
-Description
+Description:
 The WC-Tool program is a simple Java tool to display statistics about a file, including the number of lines, words, and file size (in bytes). It also supports optional flags to display only lines, words, or size.
 
 Features:
