@@ -11,20 +11,13 @@ public class wctool1 {
             return;
         }
 
-        if (arguments == 1) {
-            try {
-                FileStats file = new FileStats(args[0]);
+        try{
+            FileStats file = new FileStats(args[arguments == 1 ? 0 : 1]);
+
+            if (arguments == 1) {
                 System.out.println(file.getSize() + " " + file.getLines() + " " + file.getWords() + " " + args[0]);
-            } catch (IOException e) {
-                System.out.println("Error reading file: " + e.getMessage());
-            }
-            return;
-        }
-
-        try {
-            FileStats file = new FileStats(args[1]);
-
-            switch (args[0]) {
+            } else {
+            switch (args[0]) {  
                 case "-w":
                     System.out.println(file.getWords() + " " + args[1]);
                     break;
@@ -37,13 +30,13 @@ public class wctool1 {
                 default:
                     System.out.println("Unexpected option: " + args[0]);
                     break;
-            }
+                }   
+            } 
         } catch (IOException e) {
             System.out.println("Error reading file: " + e.getMessage());
         }
     }
 }
-
 
 class File{
 
