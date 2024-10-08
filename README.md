@@ -11,7 +11,9 @@ Display the total number of lines, words, and bytes in a file.
 Support for optional flags: 
 
 -l for line count. 
+
 -w for word count. 
+
 -c for file size in bytes.
 
 # Prerequisites
@@ -30,12 +32,15 @@ java wctool1 filename
 Flag Usage:
 
 To get only the word count:
+
 java wctool1 -w filename
 
 To get only the line count:
+
 java wctool1 -l filename
 
 To get only the file size:
+
 java wctool1 -c filename
 
 Example:
@@ -52,7 +57,6 @@ java wctool1 -w sample.txt
 
 This will display the word count of sample.txt.
 
-# Error Handling
 If the file is not found or cannot be read, the program will output:
 Error reading file: <error message>
 
