@@ -29,7 +29,7 @@ To execute the program, use the following syntax:
 
 java wctool1 filename
 
-Flag Usage:
+# Flag Usage
 
 To get only the word count:
 
