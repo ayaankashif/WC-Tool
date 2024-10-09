@@ -34,15 +34,18 @@ public class wctool1 {
             } 
         } catch (IOException e) {
             System.out.println("Error reading file: " + e.getMessage());
+        }   catch (Exception e){
+            System.out.println("Error " +e.getMessage());
         }
-    }
+    }        
+
 }
 
-class File{
+class FileStats{
 
     String fr;
     FileReader file;
-    File(String fr) throws Exception {
+    FileStats(String fr) throws Exception {
         this.fr = fr;
         try{
             this.file = new FileReader(fr);
@@ -53,7 +56,7 @@ class File{
     }
 
     
-    int lines () throws Exception{
+    int getLines () throws Exception{
         int i,count=0;
         while((i=file.read())!=-1){
             if ((char)i=='\n') 
@@ -62,7 +65,7 @@ class File{
         return count;
     }
     
-    int words () throws Exception{
+    int getWords () throws Exception{
         int i,count=0;
         while((i=file.read())!=-1){
             if ((char)i==' ') 
@@ -71,7 +74,7 @@ class File{
         return count;
     }
     
-    int size() {
+    int getSize() {
         return (int) new java.io.File(fr).length();
     }
 
